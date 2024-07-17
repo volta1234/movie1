@@ -2,13 +2,13 @@
     <div class="container">
         <div class="card">
             <h1 class="card_title">Login to your account</h1>
-            <form class="card_form">
+            <form (ngSubmit)="onSubmit()" class="card_form">
                 <div class="input">
-                    <input type="text" class="input_field" required />
+                    <input type="text" class="input_field" required [(ngModel)]="email" />
                     <label class="input_label">Email</label>
                 </div>
                 <div class="input">
-                    <input type="password" class="input_field" required />
+                    <input type="password" class="input_field" required [(ngModel)]="password" />
                     <label class="input_label">Password</label>
                     <span class="input_eye">
 
@@ -20,7 +20,15 @@
                         </svg>
                     </span>
                 </div>
-                <button class="card_button">Sign In</button>
+                <button type="submit" class="card_button">LOGIN</button>
+                <div *ngIf="loading" class="overlay">
+                    <div class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="message">Please Wait</div>
+                </div>
             </form>
             <div class="card_info">
                 <p>Not registered? <a href="/signup">Create an account</a></p>

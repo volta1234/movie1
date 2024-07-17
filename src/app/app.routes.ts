@@ -4,6 +4,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routeConfig: Routes = [
     {
@@ -18,7 +19,7 @@ export const routeConfig: Routes = [
     },
     {
         path: 'movie',
-        component: MovieComponent,
+        component: MovieComponent, canActivate: [AuthGuard],
         title: 'movies'
     },
     {

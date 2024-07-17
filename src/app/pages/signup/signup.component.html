@@ -2,17 +2,17 @@
     <div class="container">
         <div class="card">
             <h1 class="card_title">Get Started</h1>
-            <form class="card_form">
+            <form (ngSubmit)="onSubmit()" class="card_form">
                 <div class="input">
-                    <input type="text" class="input_field" required />
+                    <input type="text" class="input_field" required [(ngModel)]="userSignup.name" />
                     <label class="input_label">Full name</label>
                 </div>
                 <div class="input">
-                    <input type="text" class="input_field" required />
+                    <input type="text" class="input_field" required [(ngModel)]="userSignup.email" />
                     <label class="input_label">Email</label>
                 </div>
                 <div class="input">
-                    <input type="password" class="input_field" required />
+                    <input type="password" class="input_field" required [(ngModel)]="userSignup.password"/>
                     <label class="input_label">Password</label>
                     <span class="input_eye">
 

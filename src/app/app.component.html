@@ -13,10 +13,19 @@
                 </div>
                 <div id="navigation">
                     <ul>
-                        <li><a class="active" href="#">HOME</a></li>
-                        <li><a href="/movie">MOVIES</a></li>
-                        <li><a href="/login">LOGIN</a></li>
-                        <li><a href="/signup">GET STARTED</a></li>
+                        <li *ngIf="!authService.isLoggedIn()"><a class="active" href="#">HOME</a></li>
+                        <li *ngIf="authService.isLoggedIn()"><a href="/movie">MOVIES</a></li>
+                        <li *ngIf="!authService.isLoggedIn()"><a href="/login">LOGIN</a></li>
+                        <li *ngIf="!authService.isLoggedIn()"><a href="/signup">GET STARTED</a></li>
+                        <li *ngIf="authService.isLoggedIn()" (click)="logout()"><a>Logout</a></li>
+                        <div *ngIf="loading" class="overlay">
+                            <div class="dots-container">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <div class="message">Logging Out</div>
+                        </div>
                     </ul>
                 </div>
             </div>
