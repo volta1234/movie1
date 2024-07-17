@@ -1,42 +1,31 @@
-
 <main class="main">
-    <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My Angular App</title>
-    <base href="/">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../app/css/style.css" type="text/css" media="all" />
-  </head>
-  <body>
-    <div id="shell">
-        <div id="header">
-            <h1 id="logo" href="#">FurahApp</h1>
-            <div class="social"> <span>FOLLOW US ON:</span>
-                <ul>
-                    <li><a class="twitter" href="#">twitter</a></li>
-                    <li><a class="facebook" href="#">facebook</a></li>
-                    <li><a class="vimeo" href="#">vimeo</a></li>
-                    <!-- <li><a class="rss" href="#">rss</a></li> -->
-                </ul>
+    <div class="body">
+        <div id="shell">
+            <div id="header">
+                <h1 id="logo" href="#">FurahApp</h1>
+                <div class="social"> <span>FOLLOW US ON:</span>
+                    <ul>
+                        <li><a class="twitter" href="#">twitter</a></li>
+                        <li><a class="facebook" href="#">facebook</a></li>
+                        <li><a class="vimeo" href="#">vimeo</a></li>
+                        <!-- <li><a class="rss" href="#">rss</a></li> -->
+                    </ul>
+                </div>
+                <div id="navigation">
+                    <ul>
+                        <li><a class="active" href="#">HOME</a></li>
+                        <li><a href="/movie">MOVIES</a></li>
+                        <li><a href="/login">LOGIN</a></li>
+                        <li><a href="/signup">GET STARTED</a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="navigation">
-                <ul>
-                    <li><a class="active" href="#">HOME</a></li>
-                    <li><a href="/movie">MOVIES</a></li>
-                    <li><a href="/login">LOGIN</a></li>
-                    <li><a href="/signup">GET STARTED</a></li>
-                </ul>
+            <div id="main">
             </div>
-        </div>
-        <div id="main">
-        </div>
-        <div id="footer">
-            <div style="clear:both;"></div>
+            <div id="footer">
+                <div style="clear:both;"></div>
+            </div>
         </div>
     </div>
-</body>
-</html>
+    <router-outlet />
 </main>
-<router-outlet />

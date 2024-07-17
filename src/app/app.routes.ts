@@ -3,26 +3,32 @@ import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 export const routeConfig: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: 'home page'
+        title: 'home'
     },
     {
         path: 'login',
         component: LoginComponent,
-        title: 'login page'
+        title: 'login'
     },
     {
         path: 'movie',
         component: MovieComponent,
-        title: 'movie page'
+        title: 'movies'
     },
     {
         path: 'signup',
         component: SignupComponent,
-        title: 'signup page'
+        title: 'signup'
+    },
+    {
+        path: 'reset-password',
+        component: ResetPasswordComponent,
+        title: 'reset pssword'
     }
 ];
