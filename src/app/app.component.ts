@@ -43,7 +43,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   handleVisibilityChange() {
     if (document.hidden) {
-      this.authService.logout();
+      setTimeout
     }
   }
   title = "furahApp"

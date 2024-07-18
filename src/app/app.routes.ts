@@ -5,6 +5,7 @@ import { MovieComponent } from './pages/movie/movie.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { AuthGuard } from './guards/auth.guard';
+import { PostVideoComponent } from './post-video/post-video.component';
 
 export const routeConfig: Routes = [
     {
@@ -31,5 +32,10 @@ export const routeConfig: Routes = [
         path: 'reset-password',
         component: ResetPasswordComponent,
         title: 'reset pssword'
+    },
+    {
+        path: 'post-video',
+        component: PostVideoComponent, canActivate: [AuthGuard],
+        title: 'posts'
     }
 ];
